@@ -57,8 +57,8 @@ elasticsearch_http_cors_enabled: yes            # Enable CORS
 elasticsearch_http_cors_allow_origin: "*"       # Set allowed origins
 elasticsearch_http_cors_allow_methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
 elasticsearch_max_open_files: 65535
-elasticsearch_gateway_type: local
-elasticsearch_script_disable_dynamic: yes
+elasticsearch_script_inline: off
+elasticsearch_script_indexed: off
 
 # Setup a proxy
 elasticsearch_proxy: no                           # Enable nginx as elasticsearch proxy
@@ -99,7 +99,6 @@ elasticsearch_recovery_concurrent_streams:
 elasticsearch_recovery_max_size_per_sec:
 elasticsearch_recovery_node_concurrent_recoveries:
 elasticsearch_recovery_node_initial_primaries_recoveries:
-elasticsearch_script_disable_dynamic
 elasticsearch_script_groovy_sandbox_enabled
 elasticsearch_transport_tcp_compress:
 elasticsearch_transport_tcp_port:
